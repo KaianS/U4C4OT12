@@ -24,7 +24,9 @@ Este projeto implementa o controle de LEDs e botões utilizando interrupções n
 4. A **matriz WS2812** exibe números de **0 a 9**
 
 ### 📽 Demonstração  
-[text](https://youtu.be/5amEdhSQfOc)
+[![Demonstração do Projeto]
+(https://img.youtube.com/vi/5amEdhSQfOc/maxresdefault.jpg)]
+(https://www.youtube.com/watch?v=5amEdhSQfOc)
 
 ### 🚀 Como Executar  
 1. Clone este repositório:  
