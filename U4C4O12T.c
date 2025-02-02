@@ -1,3 +1,19 @@
+/*  
+ * Projeto: Controle de LEDs e Botões com Interrupções (Tarefa U4C4O12T)  
+ * Autor: Kaian de Souza Gonçalves  
+ * Data: 02/02/2024  
+ *  
+ * Funcionalidades:  
+ * - LED vermelho pisca a 5 Hz  
+ * - Botões A/B alteram números (0-9) em matriz WS2812 via interrupções  
+ * - Debouncing por software (200ms)  
+ * - Controle de LEDs comuns e endereçáveis  
+ *  
+ * Componentes:  
+ * - Matriz 5x5 WS2812 (GP7), LED RGB (GP13,11,12), Botões A (GP5) / B (GP6)  
+ */  
+
+
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/clocks.h"
