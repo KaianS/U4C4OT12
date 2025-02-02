@@ -29,7 +29,7 @@ static void gpio_irq_handler(uint gpio, uint32_t events);
 
 // variaveis globais
 int countBotao = 0;
-static volatile uint32_t last_time = 0; // Armazena o tempo do último evento em microssegundos
+static volatile uint32_t last_time = 0; // Armazena o tempo do ultimo evento em microssegundos
 
 // Matriz com os números (0 a 9) para a matriz de LEDs WS2812
 int numerosMatriz[10][25] = {
@@ -105,13 +105,13 @@ npLED_t leds[LED_COUNT];
 
 void init_hardware(void)
 {
-  // Configura botao A na GPIO 5 com pull-up e interrupção na borda de descida
+  // Configura botao A na GPIO 5 com pull-up e interrupção
   gpio_init(5);
   gpio_set_dir(5, GPIO_IN);
   gpio_pull_up(5);
   gpio_set_irq_enabled_with_callback(5, GPIO_IRQ_EDGE_FALL, true, gpio_irq_handler);
 
-  // Configura botão B na GPIO 6 com pull-up e interrupção na borda de descida
+  // Configura botão B na GPIO 6 com pull-up e interrupção 
   gpio_init(6);
   gpio_set_dir(6, GPIO_IN);
   gpio_pull_up(6);
@@ -178,9 +178,9 @@ void exibirNumero(int countBotao)
   for (int incremento = 0; incremento < LED_COUNT; incremento++) {
     if (numerosMatriz[countBotao][incremento] == 1) {
       set_led(incremento,
-              (LED_BRIGHTNESS * 1) / 1,           // Canal R (antes 255)
-              (LED_BRIGHTNESS * 1) / 2,           // Canal G (antes 255/2)
-              (LED_BRIGHTNESS * 1) / 3);          // Canal B (antes 255/3)
+              (LED_BRIGHTNESS * 1) / 1,           
+              (LED_BRIGHTNESS * 1) / 2,          
+              (LED_BRIGHTNESS * 1) / 3);          
     }
   }
   write_leds();
